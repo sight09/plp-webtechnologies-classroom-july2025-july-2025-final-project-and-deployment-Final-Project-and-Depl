@@ -1,0 +1,57 @@
+/* Global Styles */
+* { box-sizing: border-box; margin:0; padding:0; }
+body { font-family: Arial, sans-serif; line-height:1.6; }
+a { text-decoration: none; }
+ul { list-style: none; }
+
+/* Header / Nav */
+header { background:#222; color:#fff; padding:10px 20px; position:sticky; top:0; z-index:1000; }
+nav { display:flex; justify-content:space-between; align-items:center; }
+.nav-links { display:flex; gap:15px; }
+.nav-links li a { color:white; padding:5px 10px; transition:color 0.3s; }
+.nav-links li a.active, .nav-links li a:hover { color: gold; }
+.menu-toggle { display:none; font-size:24px; background:none; border:none; color:white; cursor:pointer; }
+
+/* Responsive nav */
+@media(max-width:768px){
+  .nav-links { display:none; flex-direction:column; background:#333; position:absolute; top:60px; right:0; width:200px; }
+  .nav-links.active { display:flex; }
+  .menu-toggle { display:block; }
+}
+
+/* Hero */
+.hero { text-align:center; padding:100px 20px; background:url('../images/it-lab.jpg') no-repeat center/cover; color:#fff; animation:fadeIn 2s ease; }
+button#ctaBtn { padding:10px 20px; font-size:18px; background:steelblue; color:white; border:none; cursor:pointer; transition: transform 0.3s, background 0.3s; }
+button#ctaBtn:hover { transform: scale(1.1); background: gold; }
+
+/* Features */
+.features { padding:50px 20px; text-align:center; }
+.feature-cards { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; margin-top:20px; }
+.card { flex:1 1 200px; padding:20px; background:#eee; border-radius:10px; transition:transform 0.3s; cursor:pointer; }
+.card:hover { transform: translateY(-10px) rotate(-2deg); }
+
+/* About Page */
+.about { padding:50px 20px; text-align:center; }
+.about-img { max-width:100%; border-radius:10px; margin-top:20px; }
+
+/* Services Page */
+.services { padding:50px 20px; text-align:center; }
+.gallery { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; margin-top:20px; }
+.gallery img { width:200px; border-radius:10px; transition: transform 0.3s; cursor:pointer; }
+.gallery img:hover { transform: scale(1.1); }
+
+/* Contact */
+.contact { padding:50px 20px; text-align:center; background:url('../images/tech-hand.jpg') no-repeat center/cover }
+form { display:flex; flex-direction:column; gap:10px; max-width:400px; margin:0 auto; }
+input, textarea { padding:10px; border-radius:5px; border:1px solid #ccc; width:100%; }
+button[type="submit"] { padding:10px; background:steelblue; color:white; border:none; cursor:pointer; transition: transform 0.3s, background 0.3s; }
+button[type="submit"]:hover { transform:scale(1.05); background: gold; }
+
+/* Footer */
+footer { background:#222; color:#fff; text-align:center; padding:20px; margin-top:40px; }
+
+/* Animations */
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+
+}
